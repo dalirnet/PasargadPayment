@@ -1,5 +1,5 @@
 <?php 
-class PAY extends controller
+class pay extends controller
 {	
 	// ----------------------
 	//	property
