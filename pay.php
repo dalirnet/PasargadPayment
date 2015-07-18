@@ -62,7 +62,7 @@ class pay extends controller
 				'sign'			=> $this->params['sign'],
 			)
 		);
-		$this->view('system/bank_form',$data);
+		$this->view('bank_form',$data);
 	}
 	
 	// ----------------------
@@ -70,9 +70,9 @@ class pay extends controller
 	// ----------------------
 	public function verify_pasargad($id,$date)
 	{
-		$resutl 	= $this->db->get('customers2',array('pcode' => $id))->row();
-		require_once BASEPATH.'library/class/RSAProcessor.class.php';
-		$key = new RSAProcessor(BASEPATH.'library/class/certificate.xml',RSAKeyType::XMLFile);		
+		$resutl 	= {Payment DB OUT}
+		require_once BASEPATH.'Class/RSAProcessor.class.php';
+		$key = new RSAProcessor(BASEPATH.'Class/certificate.xml',RSAKeyType::XMLFile);		
 		$this->params['orderId']		= $id;
 		$this->params['amount']			= $resutl['price'];
 		$this->params['localDate']		= $date;
