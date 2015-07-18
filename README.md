@@ -5,3 +5,6 @@ Pasargad Bank Online Payment In PHP
 $pay = new pay();
 $pay->pasargad({Order Code},{Order Price});
 ```
+---------------------
+# Curl Class In 
+https://github.com/dalirnet/PHP-CURL
