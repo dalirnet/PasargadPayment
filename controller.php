@@ -11,7 +11,7 @@ class controller
 			extract($var);
 		}
 		ob_start();
-		require_once BASEPATH.'views/'.$file.'.php';
+		require_once BASEPATH.'View/'.$file.'.php';
 		$var = ob_get_clean();
 		return $var;		
 	}	
