@@ -1,5 +1,5 @@
 <?php 
-class pay extends controller
+class pay
 {	
 	// ----------------------
 	//	property
@@ -21,9 +21,20 @@ class pay extends controller
 	// ----------------------
 	public function __construct()
 	{
-		parent::__construct();	
 		require_once BASEPATH.'Class/curl.php';
 	}
+	
+	public function view($file,$var = array())
+	{
+		if(!empty($var))
+		{
+			extract($var);
+		}
+		ob_start();
+		require_once BASEPATH.'View/'.$file.'.php';
+		$var = ob_get_clean();
+		return $var;		
+	}	
 	
 	// ----------------------
 	//	pasargad
