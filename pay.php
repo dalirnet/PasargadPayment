@@ -32,7 +32,7 @@ class pay extends controller
 	{
 		require_once BASEPATH.'Class/RSAProcessor.class.php';
 		$key = new RSAProcessor(BASEPATH.'Class/certificate.xml',RSAKeyType::XMLFile);		
-		$this->params['callBackUrl']	= BASEURL.'payment/callback/pasargad';
+		$this->params['callBackUrl']	= BASEURL.'callback/pasargad';
 		$this->params['orderId']		= $id;
 		$this->params['amount']			= $price;
 		$this->params['localDate']		= date('Y/m/d H:i:s');
