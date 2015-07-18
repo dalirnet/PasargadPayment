@@ -1,3 +1,4 @@
+<?php 
 class PAY extends controller
 {	
 	// ----------------------
